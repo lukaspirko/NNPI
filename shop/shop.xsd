@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <xs:element name="shop">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="chargers"/>
+                <xs:element ref="phones"/>
+            </xs:sequence>
+            <xs:attribute name="name" use="required"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="chargers">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element maxOccurs="unbounded" ref="charger"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="charger">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="maker"/>
+                <xs:element ref="price"/>
+                <xs:element ref="performance"/>
+            </xs:sequence>
+            <xs:attribute name="type" use="required"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="maker" type="xs:string"/>
+    <xs:element name="performance">
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="xs:integer">
+                    <xs:attribute name="units" use="required" type="xs:NCName"/>
+                </xs:extension>
+            </xs:simpleContent>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="phones">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element maxOccurs="unbounded" ref="phone"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="phone">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="name"/>
+                <xs:element ref="price"/>
+                <xs:element ref="memory"/>
+                <xs:element ref="guarantee"/>
+                <xs:element ref="processorSign"/>
+                <xs:element ref="operationMemory"/>
+                <xs:element ref="bateryCapacity"/>
+                <xs:element ref="chargingPerformance"/>
+                <xs:element ref="connector"/>
+                <xs:element ref="operatingSystem"/>
+                <xs:element ref="displaySize"/>
+                <xs:element ref="displayType"/>
+                <xs:element ref="color"/>
+                <xs:element ref="frontCameraResolution"/>
+                <xs:element ref="screenFineness"/>
+                <xs:element ref="wheight"/>
+                <xs:element ref="depth"/>
+                <xs:element ref="width"/>
+                <xs:element ref="height"/>
+                <xs:element ref="durability"/>
+            </xs:sequence>
+            <xs:attribute name="typeOfPhone" use="required"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="name">
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="xs:NCName">
+                    <xs:attribute name="model" use="required" type="xs:integer"/>
+                </xs:extension>
+            </xs:simpleContent>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="memory">
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="xs:integer">
+                    <xs:attribute name="units" use="required" type="xs:NCName"/>
+                </xs:extension>
+            </xs:simpleContent>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="guarantee">
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="xs:integer">
+                    <xs:attribute name="units" use="required" type="xs:NCName"/>
+                </xs:extension>
+            </xs:simpleContent>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="processorSign">
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="xs:NCName">
+                    <xs:attribute name="core" use="required" type="xs:integer"/>
+                </xs:extension>
+            </xs:simpleContent>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="operationMemory">
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="xs:integer">
+                    <xs:attribute name="units" use="required" type="xs:NCName"/>
+                </xs:extension>
+            </xs:simpleContent>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="bateryCapacity">
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="xs:decimal">
+                    <xs:attribute name="units" use="required" type="xs:NCName"/>
+                </xs:extension>
+            </xs:simpleContent>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="chargingPerformance">
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="xs:integer">
+                    <xs:attribute name="units" use="required" type="xs:NCName"/>
+                </xs:extension>
+            </xs:simpleContent>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="connector" type="xs:string"/>
+    <xs:element name="operatingSystem">
+        <xs:complexType mixed="true">
+            <xs:attribute name="version" use="required" type="xs:integer"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="displaySize">
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="xs:decimal">
+                    <xs:attribute name="units" use="required" type="xs:NCName"/>
+                </xs:extension>
+            </xs:simpleContent>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="displayType" type="xs:NCName"/>
+    <xs:element name="color" type="xs:string"/>
+    <xs:element name="frontCameraResolution">
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="xs:integer">
+                    <xs:attribute name="units" use="required" type="xs:NCName"/>
+                </xs:extension>
+            </xs:simpleContent>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="screenFineness">
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="xs:integer">
+                    <xs:attribute name="units" use="required" type="xs:NCName"/>
+                </xs:extension>
+            </xs:simpleContent>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="wheight">
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="xs:integer">
+                    <xs:attribute name="units" use="required" type="xs:NCName"/>
+                </xs:extension>
+            </xs:simpleContent>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="depth">
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="xs:decimal">
+                    <xs:attribute name="units" use="required" type="xs:NCName"/>
+                </xs:extension>
+            </xs:simpleContent>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="width">
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="xs:decimal">
+                    <xs:attribute name="units" use="required" type="xs:NCName"/>
+                </xs:extension>
+            </xs:simpleContent>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="height">
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="xs:decimal">
+                    <xs:attribute name="units" use="required" type="xs:NCName"/>
+                </xs:extension>
+            </xs:simpleContent>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="durability" type="xs:NCName"/>
+    <xs:element name="price">
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="xs:decimal">
+                    <xs:attribute name="currency" use="required" type="xs:NCName"/>
+                </xs:extension>
+            </xs:simpleContent>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
