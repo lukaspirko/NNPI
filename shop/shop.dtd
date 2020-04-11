@@ -1,0 +1,86 @@
+<?xml encoding="UTF-8"?>
+
+        <!ELEMENT shop (chargers,phones)>
+        <!ATTLIST shop name CDATA #REQUIRED>
+
+        <!ELEMENT chargers (charger)+>
+        <!ATTLIST chargers >
+
+        <!ELEMENT phones (phone)+>
+        <!ATTLIST phones >
+
+        <!ELEMENT charger (maker,price,performance)>
+        <!ATTLIST charger type CDATA #REQUIRED>
+
+        <!ELEMENT phone (name,price,memory,guarantee,processorSign,
+                operationMemory,bateryCapacity,chargingPerformance,
+                connector,operatingSystem,displaySize,displayType,
+                color,frontCameraResolution,screenFineness,wheight,
+                depth,width,height,durability)>
+        <!ATTLIST phone typeOfPhone CDATA #REQUIRED>
+
+        <!ELEMENT maker (#PCDATA)>
+        <!ATTLIST maker >
+
+        <!ELEMENT performance (#PCDATA)>
+        <!ATTLIST performance units NMTOKEN #REQUIRED>
+
+        <!ELEMENT name (#PCDATA)>
+        <!ATTLIST name model CDATA #REQUIRED>
+
+        <!ELEMENT memory (#PCDATA)>
+        <!ATTLIST memory units NMTOKEN #REQUIRED>
+
+        <!ELEMENT guarantee (#PCDATA)>
+        <!ATTLIST guarantee units NMTOKEN #REQUIRED>
+
+        <!ELEMENT processorSign (#PCDATA)>
+        <!ATTLIST processorSign core CDATA #REQUIRED>
+
+        <!ELEMENT operationMemory (#PCDATA)>
+        <!ATTLIST operationMemory units NMTOKEN #REQUIRED>
+
+        <!ELEMENT bateryCapacity (#PCDATA)>
+        <!ATTLIST bateryCapacity units NMTOKEN #REQUIRED>
+
+        <!ELEMENT chargingPerformance (#PCDATA)>
+        <!ATTLIST chargingPerformance units NMTOKEN #REQUIRED>
+
+        <!ELEMENT connector (#PCDATA)>
+        <!ATTLIST connector >
+
+        <!ELEMENT operatingSystem (#PCDATA)>
+        <!ATTLIST operatingSystem version CDATA #REQUIRED>
+
+        <!ELEMENT displaySize (#PCDATA)>
+        <!ATTLIST displaySize units NMTOKEN #REQUIRED>
+
+        <!ELEMENT displayType (#PCDATA)>
+        <!ATTLIST displayType >
+
+        <!ELEMENT color (#PCDATA)>
+        <!ATTLIST color >
+
+        <!ELEMENT frontCameraResolution (#PCDATA)>
+        <!ATTLIST frontCameraResolution units NMTOKEN #REQUIRED>
+
+        <!ELEMENT screenFineness (#PCDATA)>
+        <!ATTLIST screenFineness units NMTOKEN #REQUIRED>
+
+        <!ELEMENT wheight (#PCDATA)>
+        <!ATTLIST wheight units NMTOKEN #REQUIRED>
+
+        <!ELEMENT depth (#PCDATA)>
+        <!ATTLIST depth units NMTOKEN #REQUIRED>
+
+        <!ELEMENT width (#PCDATA)>
+        <!ATTLIST width units NMTOKEN #REQUIRED>
+
+        <!ELEMENT height (#PCDATA)>
+        <!ATTLIST height units NMTOKEN #REQUIRED>
+
+        <!ELEMENT durability (#PCDATA)>
+        <!ATTLIST durability >
+
+        <!ELEMENT price (#PCDATA)>
+        <!ATTLIST price currency NMTOKEN #REQUIRED>
