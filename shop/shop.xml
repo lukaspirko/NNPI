@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<shop name="Alza, s. r. o.">
+    <chargers>
+        <charger type="USB-C">
+            <maker>Samsung</maker>
+            <price currency="USD">5.20</price>
+            <performance units="W">75</performance>
+        </charger>
+        <charger type="Lightning port">
+            <maker>Apple Inc</maker>
+            <price currency="USD">10.20</price>
+            <performance units="W">35</performance>
+        </charger>
+    </chargers>
+    <phones>
+        <phone typeOfPhone="smart phone">
+            <name model="11">Iphone</name>
+            <price currency="CZK">25.200</price>
+            <memory units="GB">64</memory>
+            <guarantee units="MONTH">12</guarantee>
+            <processorSign core="6" >Apple</processorSign>
+            <operationMemory units="GB">4</operationMemory>
+            <bateryCapacity units="mAh">3.110</bateryCapacity>
+            <chargingPerformance units="W">18</chargingPerformance>
+            <connector>Lightning port</connector>
+            <operatingSystem version="13">iOS</operatingSystem>
+            <displaySize units="inch">6.1</displaySize>
+            <displayType>IPS</displayType>
+            <color>Space Grey</color>
+            <frontCameraResolution units="Mpx">12</frontCameraResolution>
+            <screenFineness units="PPI">326</screenFineness>
+            <wheight units="g">194</wheight>
+            <depth units="mm">8.3</depth>
+            <width units="mm">75.7</width>
+            <height units="mm">150.9</height>
+            <durability>waterproof</durability>
+        </phone>
+        <phone typeOfPhone="smart phone">
+            <name model="6">Galaxy</name>
+            <price currency="CZK">22.200</price>
+            <memory units="GB">128</memory>
+            <guarantee units="MONTH">25</guarantee>
+            <processorSign core="16" >Intel</processorSign>
+            <operationMemory units="GB">8</operationMemory>
+            <bateryCapacity units="mAh">6.110</bateryCapacity>
+            <chargingPerformance units="W">24</chargingPerformance>
+            <connector>USB-C</connector>
+            <operatingSystem version="6">Lolly Pop</operatingSystem>
+            <displaySize units="inch">8</displaySize>
+            <displayType>OLED</displayType>
+            <color>Pink</color>
+            <frontCameraResolution units="Mpx">24</frontCameraResolution>
+            <screenFineness units="PPI">350</screenFineness>
+            <wheight units="g">220</wheight>
+            <depth units="mm">9.3</depth>
+            <width units="mm">95.4</width>
+            <height units="mm">182.4</height>
+            <durability>non-waterproof</durability>
+        </phone>
+    </phones>
+</shop>
+
+
