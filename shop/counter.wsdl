@@ -1,0 +1,52 @@
+<definitions name = "CounterService"
+             targetNamespace = "http://www.examples.com/wsdl/CounterService.wsdl"
+             xmlns = "http://schemas.xmlsoap.org/wsdl/"
+             xmlns:soap = "http://schemas.xmlsoap.org/wsdl/soap/"
+             xmlns:tns = "http://www.examples.com/wsdl/CounterService.wsdl"
+             xmlns:xsd = "http://www.w3.org/2001/XMLSchema">
+
+    <message name = "CounterRequest">
+        <part name = "firstNumber" type = "xsd:float"/>
+        <part name = "secondNumber" type = "xsd:float"/>
+    </message>
+
+    <message name = "CounterResponse">
+        <part name = "finalNumber" type = "xsd:float"/>
+    </message>
+
+    <portType name = "Counter_PortType">
+        <operation name = "sum">
+            <input message = "tns:CounterRequest"/>
+            <output message = "tns:CounterResponse"/>
+        </operation>
+    </portType>
+
+    <binding name = "Counter_Binding" type = "tns:Counter_PortType">
+        <soap:binding style = "rpc"
+                      transport = "http://schemas.xmlsoap.org/soap/http"/>
+        <operation name = "sum">
+            <soap:operation soapAction = "sum"/>
+            <input>
+                <soap:body
+                        encodingStyle = "http://schemas.xmlsoap.org/soap/encoding/"
+                        namespace = "urn:examples:counterservice"
+                        use = "encoded"/>
+            </input>
+
+            <output>
+                <soap:body
+                        encodingStyle = "http://schemas.xmlsoap.org/soap/encoding/"
+                        namespace = "urn:examples:counterservice"
+                        use = "encoded"/>
+            </output>
+        </operation>
+    </binding>
+
+    <service name = "Counter_Service">
+        <documentation>WSDL File for Counter_PortType</documentation>
+        <port binding = "tns:Counter_Binding" name = "Counter_PortType">
+            <soap:address
+                    location = "http://www.examples.com/Sum/" />
+        </port>
+    </service>
+</definitions>
